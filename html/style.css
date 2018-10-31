@@ -1,0 +1,205 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+* {padding: 0; margin: 0; box-sizing: border-box; font-family: 'Lemonada', src: url("Lemonada.ttf"), sans-serif;}
+
+@font-face {
+    font-family: Lemonada;
+    src: url("Lemonada.ttf");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+
+}
+.obrazek {
+    width: 300px;
+    height: 200px;
+    background: url('html/img/vehicle/background.png');
+
+}
+
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color:rgba(0, 0, 0, 0);
+    border: 0px solid black;
+}
+
+p {
+    margin: 0 auto;
+    text-align: center;
+    font-family: Lemonada;
+}
+
+#container {
+    min-height: 100%;
+}
+
+#speedcontainer {
+    position: absolute;
+    bottom: 35px;
+    right: 45px;
+}
+
+.speedtext {
+    color: #29a329;
+    font-size: 50px;
+    text-shadow: 2px 2px 0px #000000; /* Text outline */
+   position: absolute;
+	top: 28%;
+	left: 62%;
+
+}
+
+.speedkmh {
+    color: #29a329;
+    font-size: 20px;
+    text-shadow: 2px 2px 0px #000000; /* Text outline */
+   position: absolute;
+	top: 52%;
+	left: 62%;
+
+}
+.carStats{
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	display: none;
+
+}
+
+.stat{
+	width: 220px;
+	height: 30px;
+	position: relative;
+	//box-shadow: 0 10px 15px rgba(0,0,0,0);
+}
+
+.stat .icon{
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	display: block;
+	right: -10px;
+}
+
+.stat .icon i, .stat .icon img{
+	position: absolute;
+	top: -25%;
+	left: -45%;
+    transform: translate(-50%, -50%);
+}
+
+.stat .icon img{
+	height: 50px;
+	width: 50px;
+}
+
+
+.stat span{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+.carStats .stat{
+	background: linear-gradient(to right, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
+	text-align: left;
+}
+
+.carStats .stat .icon{
+	float: right;
+	right: 50px;
+	left: 50px;
+}
+
+.carStats .stat span{
+	white-space: nowrap;
+	right: 20px;
+}
+
+.status{
+	display: flex;
+	width: 195px;
+	position: relative;
+	left: -15px;
+	justify-content: space-between;
+}
+.stat1{
+	color: #fff;
+	background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	width: 220px;
+	height: 30px;
+	position: relative;
+	margin-bottom: 7px;
+	//box-shadow: 0 10px 15px rgba(0,0,0,0);
+}
+
+.stat1 .icon{
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	display: block;
+	right: -10px;
+}
+
+.stat1 .icon i, .stat1 .icon img{
+	position: absolute;
+	top: -40%;
+	left: -150%;
+    transform: translate(-50%, -50%);
+}
+
+.stat1 .icon img{
+	height: 50px;
+	width: 50px;
+}
+
+
+.stat1 span{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: -20px;
+}
+.stat2{
+	color: #fff;
+	background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+	width: 220px;
+	height: 30px;
+	position: relative;
+	margin-bottom: 7px;
+	//box-shadow: 0 10px 15px rgba(0,0,0,0);
+}
+
+.stat2 .icon{
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	display: block;
+	right: -10px;
+}
+
+.stat2 .icon i, .stat2 .icon img{
+	position: absolute;
+	top: 5%;
+	left: -145%;
+    transform: translate(-50%, -50%);
+}
+
+.stat2 .icon img{
+	height: 50px;
+	width: 50px;
+}
+
+
+.stat2 span{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: -20px;
+}
+
