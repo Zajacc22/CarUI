@@ -19,54 +19,55 @@ CarUI was based on esx_customui and speedometer code.
 4) Add `start carui` to your server.cfg
 
 How to make icons work
-	*[LOCK]
-		*locksystem\client\VehicleManager_CL.lua
-		```
-		rTable.lock = function()
-			lockStatus = self.lockStatus
-			if(lockStatus <= 2)then
-				self.lockStatus = 4
-				SetVehicleDoorsLocked(self.id, self.lockStatus)
-				SetVehicleDoorsLockedForAllPlayers(self.id, 1)
-				TriggerEvent("esx_customui:lock", self.lockStatus)
-				TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 10, "lock", 1.0)
-			elseif(lockStatus > 2)then
-				self.lockStatus = 1
-				SetVehicleDoorsLocked(self.id, self.lockStatus)
-				SetVehicleDoorsLockedForAllPlayers(self.id, false)
-				TriggerEvent("esx_customui:lock", self.lockStatus)
-				TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 10, "unlock", 1.0)
-			end
-		end
-		```
-	*[BELTS]
-		*in belts script\client.lua
-		```
-		        if beltOn then 
-                            Wait(0)
-							local pas = 1
-							TriggerEvent('esx_carui:belts', belt)
 
-                else
-                            Wait(0)
-							local pas = 0
-							TriggerEvent('esx_carui:belts', belt)
+*[LOCK]
+*locksystem\client\VehicleManager_CL.lua
 
-                end 
-            end
-		```
-	*[ENGINE]
-		*resources\wk_vehdamage\cl_vehicle.lua
-		```		
-            if ( GetPedInVehicleSeat( vehicle, -1 ) == ped ) then 
-                local damage = GetVehicleEngineHealth( vehicle )
-				TriggerEvent('esx_carui:vd', damage)
+```
+rTable.lock = function()
+	lockStatus = self.lockStatus
+	if(lockStatus <= 2)then
+		self.lockStatus = 4
+		SetVehicleDoorsLocked(self.id, self.lockStatus)
+		SetVehicleDoorsLockedForAllPlayers(self.id, 1)
+		TriggerEvent("esx_customui:lock", self.lockStatus)
+		TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 10, "lock", 1.0)
+	elseif(lockStatus > 2)then
+		self.lockStatus = 1
+		SetVehicleDoorsLocked(self.id, self.lockStatus)
+		SetVehicleDoorsLockedForAllPlayers(self.id, false)
+		TriggerEvent("esx_customui:lock", self.lockStatus)
+		TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 10, "unlock", 1.0)
+	end
+end
+```
 
-                if ( damage < levelOfDamageToKillThisBitch and IsValidVehicle( vehicle ) ) then 
-                    SetVehicleEngineHealth( vehicle, 300 )
-                    SetVehicleEngineOn( vehicle, false, true )
-		```
+*[BELTS]
+*in belts script\client.lua
+
+```
+if beltOn then 
+    Wait(0)
+	local belt = 1
+	TriggerEvent('esx_carui:belts', belt)
+else
+    Wait(0)
+	local belt = 0
+	TriggerEvent('esx_carui:belts', belt)
+	end 
+end
+```
+
+*[ENGINE]
+*resources\wk_vehdamage\cl_vehicle.lua
+```		
+if ( GetPedInVehicleSeat( vehicle, -1 ) == ped ) then 
+    local damage = GetVehicleEngineHealth( vehicle )
+	TriggerEvent('esx_carui:vd', damage)
+	if ( damage < levelOfDamageToKillThisBitch and IsValidVehicle( vehicle ) ) then 
+        SetVehicleEngineHealth( vehicle, 300 )
+        SetVehicleEngineOn( vehicle, false, true )
+```
 	
-	
-My Discord: Zajacc22#7732
+	My Discord: Zajacc22#7732
 
