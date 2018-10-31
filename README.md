@@ -4,7 +4,7 @@ FiveM CarUI is a public released UI to improve the UI for the ESX Framework. You
 CarUI was based on esx_customui and speedometer code. 
 
 # Screenshot preview
-![screenshot](https://imgur.com/a/zOSQ1Wz)
+![screenshot](https://cdn.discordapp.com/attachments/506939695465365517/506942879944671272/unknown.png)
 
 # Requirements
 * [es_extended](https://github.com/ESX-Org/es_extended)
