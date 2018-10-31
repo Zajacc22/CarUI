@@ -20,8 +20,9 @@ CarUI was based on esx_customui and speedometer code.
 
 How to make icons work
 
-*[LOCK]
-*locksystem\client\VehicleManager_CL.lua
+[LOCK]
+
+locksystem\client\VehicleManager_CL.lua
 
 ```
 rTable.lock = function()
@@ -42,8 +43,9 @@ rTable.lock = function()
 end
 ```
 
-*[BELTS]
-*in belts script\client.lua
+[BELTS]
+
+in belts script\client.lua
 
 ```
 if beltOn then 
@@ -58,8 +60,9 @@ else
 end
 ```
 
-*[ENGINE]
-*resources\wk_vehdamage\cl_vehicle.lua
+[ENGINE]
+
+resources\wk_vehdamage\cl_vehicle.lua
 ```		
 if ( GetPedInVehicleSeat( vehicle, -1 ) == ped ) then 
     local damage = GetVehicleEngineHealth( vehicle )
@@ -69,5 +72,5 @@ if ( GetPedInVehicleSeat( vehicle, -1 ) == ped ) then
         SetVehicleEngineOn( vehicle, false, true )
 ```
 	
-	My Discord: Zajacc22#7732
+My Discord: Zajacc22#7732
 
